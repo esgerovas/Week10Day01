@@ -1,0 +1,127 @@
+#price{
+	text-align:center;
+	padding:10px 0;
+	h1{
+		font-size:45px;
+		font-weight:300;
+		margin:50px 0 15px 0;
+		span{
+			color:$blueColor;
+		}
+	}
+	p{
+		font-size:16px;
+		margin-bottom:70px;
+	}
+	.panel{
+		border:1px solid $greyColor;
+		border-radius:0;
+		background-color: #F7F7F7;
+		color:$textColor;
+		margin-top:20px;
+		@include transition(all,0.3s, ease);
+		h2{
+			font-size:26px;
+			font-weight:300;
+			margin:15px 0;
+		}
+		.dollar{
+			padding:15px 0;
+			background-color:rgba(171, 172, 179, 0.1);
+			h1{
+				font-size: 110px;
+				color:$blueColor;
+				font-weight:300;
+				margin:0;
+				span{
+					font-size:45px;
+					font-weight:400;
+					vertical-align: super;
+				}
+			}
+			span{
+				color:$blueColor;
+				text-transform: uppercase;
+				font-size:16px;
+			}
+		}
+
+		.info{
+			padding:27px 15%;
+
+			h4{
+				font-size:16px;
+				font-weight:400;
+				line-height: 52px;
+				border-bottom:1px solid lightgrey;
+				margin:0;
+				span{
+					color:lighten(black,20%);
+					font-weight:600;
+				}
+			&:nth-child(4){
+				border:0;
+			}
+			}
+
+			a{
+				width:100%;
+				border:1px solid $blueColor;
+				display:inline-block;
+				height:45px;
+				color:$blueColor;
+				margin:30px 0 20px 0;
+				padding:13px;
+				font-size:14px;
+				font-weight: 500;
+				text-transform: uppercase;
+				position: relative;
+				@include border-radius(3px);
+				@include transition(all,0.5s,ease);
+				&:hover{
+					background-color:white;
+					color:$blueColor;
+				}
+			}
+		}
+		&.disabled{
+			span,a,h4,h3,h2,h1{
+			color:darken(lightgrey,10%) !important;
+			}
+			a{
+				border-color:darken(lightgrey,10%);
+			}
+		}
+		&.active{
+			@include transition(all, 0.4s, ease);
+		}
+		&.active:hover{
+			background-color:$blueColor;
+			.dolor{
+				background-color:rgba(171, 172, 179, 0.8);
+				z-index:1;
+			}
+			span,a,h4,h3,h2,h1{
+				color:white;
+			}
+			a{
+				border-color:white;
+				@include transition(all,0.2s,ease);
+				&:hover{
+					color:$blueColor;
+				}
+			}
+		}
+	}
+	.logos{
+		list-style-type: none;
+		display:flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		text-align:center;
+		li{
+			margin:5px 30px;
+		}
+	}
+
+}

@@ -1,0 +1,103 @@
+#home{
+	--height:670px;  //pencerenin height-ine gore teyin olunur jquery
+	background:#94365B url('../images/background.jpg') no-repeat left top;
+	background-attachment:fixed;
+	background-size:cover;
+	padding-top:17%;
+	.container{
+		display:none;
+	}
+	.title{
+		text-align:center;
+		color:white;
+		h1{
+			font-size:58px;
+			font-weight:300;
+			span{
+				color:$blueColor;
+			}
+		}
+		h3{
+			font-size:24px;
+			color:#F9F4F5;
+			font-weight:300;
+		}
+		a{
+			@include border-radius(3px);
+			@include transition(all, 0.2s, ease);
+			color:white;
+			display:inline-block;
+			padding:12px 34px;
+			font-size:14px;
+			text-transform: uppercase;
+			margin:22px 6px 0 6px;
+			&.btn-start{
+				background-color:$blueColor;
+				border:1px solid $blueColor;
+				padding:12px 50px;
+				&:hover{
+					background-color:darken($blueColor, 5%);
+					text-decoration: none;
+					color:white;
+				}
+			}
+			&.btn-tour{
+				border:1px solid white;
+				&:hover{
+					background-color:white;
+					color:$blueColor;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+@media only screen and (max-width:991px){
+	#home{
+		background-attachment:scroll;
+	}
+}
+@media only screen and (max-width:768px){
+	#home{
+		.title{
+			 h1{
+				font-size:28px;
+			}
+			h3{
+				font-size:20px;
+			}
+		}
+	}
+}
+@media only screen and (max-width:480px){
+	#home{
+		padding-top:180px;
+		.title{
+			 a{
+				display:block;
+			}
+		}
+	}
+}
+#logo{
+	background-color:$greyColor;
+	text-align:center;
+	padding:15px 0 10px;
+	ul{
+		list-style-type: none;
+		justify-content:center;
+		padding:0;
+		position:relative;
+		li{
+			padding:10px 25px;
+			display:inline-block;
+			max-width:170px;
+			position:relative;
+			img{
+				width:100%;
+			}
+		}
+		
+	}
+
+}

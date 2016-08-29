@@ -1,0 +1,154 @@
+#about{
+	color:black;
+	padding-bottom:50px;
+//global properties
+	h2{
+		font-size:34px;
+		font-weight:300;
+		margin:50px 0 15px 0;
+		span{
+			color:$blueColor;
+		}
+	}
+	h3{
+		font-size:46px;
+		text-transform: uppercase;
+		font-weight:300;
+		
+	}
+	h4{
+		font-size:16px;
+		text-transform: uppercase;
+		margin-top:-17px;
+	}
+	h5{
+		font-size:16px;
+		line-height: 25px;
+		margin-bottom:20px;
+	}
+	p{
+		font-size:16px;
+	}
+	i{
+		color:$blueColor;
+		font-size:80px;
+		margin:0;
+	}
+	img{
+		margin:0 auto;
+	}
+	.first-come{
+		display:none;
+	}
+//*********first-part**************
+	.first-part{
+		padding-bottom:18px;
+		border-bottom:1px solid $borderGrey;
+		.btngroup{
+			text-transform: uppercase;
+			padding:60px 0 50px 0;
+			display: flex;
+			justify-content: center;
+			a{
+				border:1px solid $borderGrey;
+				padding:18px 58px;
+				@include border-radius(1px);
+				@include transition(all,0.2s,ease);
+				text-decoration:none;
+				font-size:14px;
+				display:inline-block;
+				color:#606060;
+				cursor: pointer;
+				&:hover,&.active{
+					background-color: $blueColor;
+					color:white;
+				}
+			}
+		}
+	/**********Button Elements*******/
+		#first-tab{
+			--display: none;
+			.btngroup{
+				padding:30px 0 10px 0;
+				a{
+					border:1px solid $blueColor;
+					padding:13px 25px;
+					margin:10px 8px;
+					@include border-radius(4px);
+					color:$blueColor;
+					&:hover,&.active{
+					background-color: $blueColor;
+					color:white;
+					}
+				} 
+			}
+		}
+		#second-tab{
+			display: none;
+		}
+		#third-tab{
+			display: none;
+			.info{
+				margin:40px 0;
+				.tab{
+					max-width:270px;
+					margin:10px auto;
+				}
+			}
+		}
+	}
+/*********SECOND-PART**************/
+	.second-part{
+		.row{
+			padding-top:25px;
+			padding-bottom:25px;
+			&:first-child {
+				border-bottom:1px solid $borderGrey;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width:991px){
+	#about{
+		h3{
+			font-size: 30px;
+		}
+		p{
+			font-size: 14px;
+		}
+	}
+}
+@media only screen and (max-width:768px){
+	#about{
+		h2{
+			font-size: 28px ;
+		}
+		.first-part > .container > .btngroup {
+			display: block !important;
+			a{
+				display: block !important;
+				width: 100%;
+			}
+		}
+	}
+	.second-come{
+		display:none;
+	}
+	.first-come{
+		display:block !important;
+	}
+}
+@media only screen and (max-width:480px){
+	#about{
+		#first-tab{
+			.btngroup{
+				flex-wrap: wrap;
+				a{
+					margin:10px 2px !important;
+					
+				} 
+			}
+		}
+	}
+}

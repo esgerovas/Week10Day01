@@ -1,0 +1,135 @@
+#contact{
+	color:white;
+	.first-contact{
+		background-color:$blueColor;
+		padding:10px 16px 0;
+		i{
+			font-size:60px;
+			display: block;
+			padding:20px 10px;
+		}
+		h1{
+			font-size:45px;
+			font-weight:300;
+			margin-bottom:0;
+		}
+		p{
+			font-size:16px;
+		}
+		a{
+			width:185px;
+			border:1px solid white;
+			display:inline-block;
+			height:46px;
+			color:white;
+			margin:30px 0 20px 0;
+			padding:13px;
+			font-size:14px;
+			font-weight: 500;
+			text-transform: uppercase;
+			position: relative;
+			text-align:center;
+			@include border-radius(3px);
+			@include transition(all,0.2s,ease);
+			&:hover{
+				background-color:white;
+				color:$blueColor;
+			}
+		}
+	} //firts-contact
+
+	.second-contact{
+		background:#94365B url('../images/background.jpg') no-repeat center top;
+		background-attachment:fixed;
+		background-size:cover;
+		padding:30px 0;
+		.col-xs-12{
+			padding:20px 15px 20px 15px;
+		}
+		img{
+			height:30px;
+			margin:30px 0;
+		}
+		p{
+			font-size:15px;
+		}
+		span{
+			font-weight:600;
+			font-size:15px;
+		}
+		h4{
+			font-size:16px;
+			text-transform: uppercase;
+			margin:30px 0 25px 0;
+			text-align:center;
+		}
+		ul{
+			list-style-type: none;
+			margin:0;
+			padding:0;
+			&.social-icons{
+				li{
+					display:inline;
+					padding:17px;
+					i{
+						font-size:50px;
+						color:$blueColor;
+					}
+				}
+			}
+			&.address{
+				padding:0;
+				li{
+					padding:6px 0;
+					font-size:15px;
+					a{	
+						font-size:16px;
+						color:$blueColor;
+						&:hover{
+							text-decoration: underline;
+						}
+					}
+				}
+				i{
+					font-size:20px;
+					color:$blueColor;
+					display:block;
+					float:left;
+					margin-right:12px;
+				}
+			}
+		}
+
+	} //secon-contact
+	.footer{
+		margin-top:50px;
+		text-align: center;
+		opacity:0.6;
+	}
+}
+@media only screen and (max-width:1200px){
+
+}
+
+#scroll-top{
+	display:none; //Jquery de deyisecek
+	width:40px;
+	height:40px;
+	margin-right:20px;
+	margin-bottom:20px;
+	background-color:rgba(0, 0, 0, 0.8);
+	@include transition(all, 0.5s, ease);
+	@include border-radius(2px);
+	position:fixed;
+	right:0;
+	bottom:0;
+	text-align:center;
+	line-height:30px;
+	color:$blueColor;
+	cursor:pointer;
+	font-size:35px;
+	opacity:0.5;
+	&:hover{
+		opacity:1;
+	}
+}
